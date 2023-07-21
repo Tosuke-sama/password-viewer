@@ -1,7 +1,7 @@
 import { useState } from "react"
 import date from "../utils/time"
 import "./style.css"
-import login_redirect from "../apis/login"
+import login from "../apis/login1"
 import { Box, Button, ButtonGroup, TextField } from "@mui/material"
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 declare module '@mui/material/styles' {
@@ -96,7 +96,7 @@ function IndexNewtab() {
       window.location.href = "https://bsdt.cdut.edu.cn/EIP/nonlogin/homePage.htm"
     }
   }
-  // let timeTable:any = login_redirect("https://cas.paas.cdut.edu.cn/cas/login?service=http%3A%2F%2Fjw.cdut.edu.cn%2Fsso%2Flogin.jsp%3FtargetUrl%3Dbase64aHR0cDovL2p3LmNkdXQuZWR1LmNuL0xvZ29uLmRvP21ldGhvZD1sb2dvblNTT2NkbGdkeA%3D%3D");
+  let timeTable:any = login("https://cas.paas.cdut.edu.cn/cas/login?service=http%3A%2F%2Fjw.cdut.edu.cn%2Fsso%2Flogin.jsp%3FtargetUrl%3Dbase64aHR0cDovL2p3LmNkdXQuZWR1LmNuL0xvZ29uLmRvP21ldGhvZD1sb2dvblNTT2NkbGdkeA%3D%3D");
   return (
     <div
       className="main"
